@@ -47,7 +47,7 @@ export default function Cam() {
 
 
             </div>
-            <video onClick={takePhoto} className='mt-8' ref={videoRef} autoPlay />
+            <video height={400} onClick={takePhoto} className='mt-8 h-96' ref={videoRef} autoPlay />
 
             <div className='flex flex-col w-80'>
                 {images.map((image, index) => (
