@@ -44,10 +44,10 @@ export default function Cam() {
     return (
         <div className='flex flex-col items-center content-center mt-8'>
             <div className='flex fixed top-4 left-4 p-4 mt-8 gap-8'>
-                <button onClick={takePhoto}>Tirar Foto</button>
-                <button onClick={uploadPhoto}>Fazer Upload</button>
+
+
             </div>
-            <video className='mt-8' ref={videoRef} autoPlay />
+            <video onClick={takePhoto} className='mt-8' ref={videoRef} autoPlay />
 
             <div className='flex flex-col w-80'>
                 {images.map((image, index) => (
@@ -56,6 +56,7 @@ export default function Cam() {
                         <button onClick={() => deletePhoto(index)}>Apagar Foto</button>
                     </div>
                 ))}</div>
+            <button className='mt-8 flex fixed bottom-4 bg-red-700 text-white rounded-lg p-4' onClick={uploadPhoto}>Fazer Upload</button>
         </div>
     );
 }
